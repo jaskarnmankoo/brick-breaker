@@ -58,6 +58,7 @@ typings/
 .cache/
 public
 package-lock.json
+font-preload-cache.json
 
 # Mac files
 .DS_Store
