@@ -4,7 +4,6 @@ module.exports = {
     'gatsby-plugin-csp',
     'gatsby-plugin-postcss',
     'gatsby-plugin-preact',
-    'gatsby-plugin-preload-fonts',
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-html-attributes',
