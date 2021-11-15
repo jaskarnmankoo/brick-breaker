@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  canvas {
+    @apply border-2 border-black dark:border-white;
+  }
+  h1 {
+    @apply text-4xl;
+  }
+  p {
+    @apply text-lg;
+  }
+  footer,
+  main {
+    @apply w-11/12 mt-12 mx-auto;
+  }
+  .game-mode {
+    @apply p-2 text-xl rounded-xl border-2 border-black hover:bg-cream dark:border-white dark:hover:bg-black;
+  }
+  .grid {
+    @apply gap-8;
+  }
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+}
