@@ -461,7 +461,6 @@ export default function Home() {
     <>
       <SearchEngineOptimization title="Home" gameMode={gameMode} />
       <main className="grid grid-cols-1">
-        <h1 className="text-center">Brick Breaker</h1>
         <div className="grid grid-cols-5 justify-items-center">
           <img id="grape" src={grape} alt="" width={40} height={65} />
           <img id="mango" src={mango} alt="" width={40} height={65} />
@@ -504,9 +503,6 @@ export default function Home() {
           />
         </div>
       </main>
-      <footer className="text-center">
-        <p>Copyright ©2021 All rights reserved</p>
-      </footer>
     </>
   );
 }
