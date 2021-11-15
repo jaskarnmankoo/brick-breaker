@@ -17,9 +17,15 @@ const randomInt = (min, max) => {
 };
 
 export default function Home() {
-  const queryString = window.location.search;
-  const urlParams = new URLSearchParams(queryString);
-  const isMobile = urlParams.get('mobile');
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const mobile = urlParams.get('mobile');
+
+    setIsMobile(mobile);
+  }, []);
 
   const darkMode = useDarkMode(null);
 
