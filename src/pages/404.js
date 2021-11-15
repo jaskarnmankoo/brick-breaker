@@ -4,11 +4,7 @@ import { Link } from 'gatsby';
 
 import SearchEngineOptimization from '../components/SearchEngineOptimization';
 
-import useDarkMode from '../hooks/useDarkMode';
-
 export default function NotFound() {
-  const darkMode = useDarkMode(null);
-
   return (
     <>
       <SearchEngineOptimization title="Oops..." />

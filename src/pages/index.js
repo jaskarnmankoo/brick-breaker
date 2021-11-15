@@ -1,7 +1,5 @@
 import * as React from 'react';
 
-import { isMobile } from 'react-device-detect';
-
 import SearchEngineOptimization from '../components/SearchEngineOptimization';
 
 import useDarkMode from '../hooks/useDarkMode';
@@ -19,6 +17,10 @@ const randomInt = (min, max) => {
 };
 
 export default function Home() {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const isMobile = urlParams.get('mobile');
+
   const darkMode = useDarkMode(null);
 
   const [doneGame, setDoneGame] = React.useState(false);
