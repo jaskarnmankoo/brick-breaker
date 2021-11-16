@@ -1,8 +1,7 @@
 import * as React from 'react';
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export default function useDarkMode(_darkMode: null): boolean {
-  const [isDarkMode, setIsDarkMode] = React.useState<boolean>(false);
+export default function useDarkMode(_darkMode) {
+  const [isDarkMode, setIsDarkMode] = React.useState(false);
 
   React.useEffect(() => {
     if (
@@ -14,7 +13,7 @@ export default function useDarkMode(_darkMode: null): boolean {
       setIsDarkMode(false);
     }
 
-    const switchMode = (event: MediaQueryListEvent) => {
+    const switchMode = (event) => {
       setIsDarkMode(event.matches ? true : false);
     };
 
