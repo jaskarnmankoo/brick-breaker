@@ -482,26 +482,29 @@ export default function Home() {
           </p>
         )}
         {!gameMode && (
-          <div className="grid grid-cols-3">
-            <button
-              className="game-mode"
-              onClick={() => gameModeHandler('easy')}
-            >
-              Easy
-            </button>
-            <button
-              className="game-mode"
-              onClick={() => gameModeHandler('medium')}
-            >
-              Medium
-            </button>
-            <button
-              className="game-mode"
-              onClick={() => gameModeHandler('hard')}
-            >
-              Hard
-            </button>
-          </div>
+          <>
+            <p className="text-xl text-center">Choose a difficulty level...</p>
+            <div className="grid grid-cols-3">
+              <button
+                className="game-mode"
+                onClick={() => gameModeHandler('easy')}
+              >
+                Easy
+              </button>
+              <button
+                className="game-mode"
+                onClick={() => gameModeHandler('medium')}
+              >
+                Medium
+              </button>
+              <button
+                className="game-mode"
+                onClick={() => gameModeHandler('hard')}
+              >
+                Hard
+              </button>
+            </div>
+          </>
         )}
         <div className="grid grid-cols-1 justify-items-center">
           <canvas
