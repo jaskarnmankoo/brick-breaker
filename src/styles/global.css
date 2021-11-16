@@ -12,7 +12,6 @@
   p {
     @apply text-lg;
   }
-  footer,
   main {
     @apply w-11/12 mt-12 mx-auto;
   }
