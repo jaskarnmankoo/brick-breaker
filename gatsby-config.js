@@ -5,12 +5,7 @@ module.exports = {
     'gatsby-plugin-postcss',
     'gatsby-plugin-preact',
     'gatsby-plugin-react-helmet',
-    {
-      resolve: 'gatsby-plugin-html-attributes',
-      options: {
-        lang: 'en'
-      }
-    }
+    { resolve: 'gatsby-plugin-html-attributes', options: { lang: 'en' } }
   ],
   siteMetadata: {
     title: 'Brick Breaker',
