@@ -479,18 +479,21 @@ export default function Home(): JSX.Element {
             <p className="text-xl text-center">Choose a difficulty level...</p>
             <div className="grid grid-cols-3">
               <button
+                type="button"
                 className="game-mode"
                 onClick={() => setDifficulty('easy')}
               >
                 Easy
               </button>
               <button
+                type="button"
                 className="game-mode"
                 onClick={() => setDifficulty('medium')}
               >
                 Medium
               </button>
               <button
+                type="button"
                 className="game-mode"
                 onClick={() => setDifficulty('hard')}
               >
@@ -501,7 +504,11 @@ export default function Home(): JSX.Element {
         ) : (
           <>
             {!start && (
-              <button className="game-mode w-60 mx-auto" onClick={startGame}>
+              <button
+                type="button"
+                className="game-mode w-60 mx-auto"
+                onClick={startGame}
+              >
                 Start Game
               </button>
             )}
