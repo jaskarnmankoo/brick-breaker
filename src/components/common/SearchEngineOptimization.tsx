@@ -3,11 +3,18 @@ import * as React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
 
+interface Props {
+  difficulty?: string;
+  lang?: string;
+  title: string;
+}
+
+/** Creates Search Engine Optimization when specified on a page */
 export default function SearchEngineOptimization({
+  difficulty,
   lang = 'en',
-  gameMode,
   title
-}) {
+}: Props): JSX.Element {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -16,6 +23,7 @@ export default function SearchEngineOptimization({
             title
             description
             author
+            contact
           }
         }
       }
@@ -27,7 +35,7 @@ export default function SearchEngineOptimization({
       bodyAttributes={{ class: 'dark:bg-dark-mode dark:text-white' }}
       htmlAttributes={{
         lang,
-        class: `${gameMode ? 'overflow-hidden' : 'overflow-x-hidden'}`
+        class: `${difficulty ? 'overflow-hidden' : 'overflow-x-hidden'}`
       }}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
@@ -53,6 +61,19 @@ export default function SearchEngineOptimization({
           content: site.siteMetadata.description
         }
       ]}
-    />
+    >
+      <script type="application/ld+json">
+        {JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'Organization',
+          name: site.siteMetadata.title,
+          contactPoint: {
+            '@type': 'ContactPoint',
+            telephone: site.siteMetadata.contact,
+            contactType: 'Customer service'
+          }
+        })}
+      </script>
+    </Helmet>
   );
 }
