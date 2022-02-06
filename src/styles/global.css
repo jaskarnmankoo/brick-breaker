@@ -13,7 +13,7 @@
     @apply text-lg;
   }
   main {
-    @apply w-11/12 mt-12 mx-auto;
+    @apply w-11/12 mt-12 mx-auto text-center;
   }
   .game-mode {
     @apply p-2 text-xl rounded-xl border-2 border-black hover:bg-cream dark:border-white dark:hover:bg-black;
