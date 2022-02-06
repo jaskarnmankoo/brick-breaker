@@ -3,7 +3,11 @@
     "esModuleInterop": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "lib": ["dom", "es2015", "es2017"],
+    "lib": [
+      "dom",
+      "es2015",
+      "es2017"
+    ],
     "module": "commonjs",
     "noEmit": true,
     "noUnusedLocals": true,
@@ -13,6 +17,11 @@
     "strict": true,
     "target": "es6"
   },
-  "include": ["./src/**/*"],
-  "exclude": ["node_modules", "build"]
+  "include": [
+    "./src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "build"
+  ]
 }
