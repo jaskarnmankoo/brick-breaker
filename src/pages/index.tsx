@@ -13,6 +13,7 @@ import strawberryImage from '../assets/strawberry.webp';
 
 type Bricks = { [coordinate: string]: number }[][];
 
+/** Returns the Brick Breaker game */
 export default function Home(): JSX.Element {
   const darkMode = useDarkMode(false);
 
@@ -69,6 +70,10 @@ export default function Home(): JSX.Element {
     const mobile = urlParams.get('mobile');
     setIsMobile(mobile === 'true');
   }, []);
+
+  const setEasy = React.useCallback(() => setDifficulty('easy'), []);
+  const setMedium = React.useCallback(() => setDifficulty('medium'), []);
+  const setHard = React.useCallback(() => setDifficulty('hard'), []);
 
   const keyDownHandler = React.useCallback((e: KeyboardEvent) => {
     if (e.key == 'Right' || e.key == 'ArrowRight') {
@@ -478,25 +483,13 @@ export default function Home(): JSX.Element {
           <>
             <p className="text-xl text-center">Choose a difficulty level...</p>
             <div className="grid grid-cols-3">
-              <button
-                type="button"
-                className="game-mode"
-                onClick={() => setDifficulty('easy')}
-              >
+              <button type="button" className="game-mode" onClick={setEasy}>
                 Easy
               </button>
-              <button
-                type="button"
-                className="game-mode"
-                onClick={() => setDifficulty('medium')}
-              >
+              <button type="button" className="game-mode" onClick={setMedium}>
                 Medium
               </button>
-              <button
-                type="button"
-                className="game-mode"
-                onClick={() => setDifficulty('hard')}
-              >
+              <button type="button" className="game-mode" onClick={setHard}>
                 Hard
               </button>
             </div>
