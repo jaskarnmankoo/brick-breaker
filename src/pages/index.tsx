@@ -475,13 +475,13 @@ export default function Home(): JSX.Element {
       <SearchEngineOptimization title="Home" difficulty={difficulty} />
       <main className="grid grid-cols-1">
         {gameOver && (
-          <p className="text-xl text-center">
+          <p className="text-center text-xl">
             Game over! Your score was: {score.current + bonus.current}
           </p>
         )}
         {!difficulty ? (
           <>
-            <p className="text-xl text-center">Choose a difficulty level...</p>
+            <p className="text-center text-xl">Choose a difficulty level...</p>
             <div className="grid grid-cols-3">
               <button type="button" className="game-mode" onClick={setEasy}>
                 Easy
@@ -499,7 +499,7 @@ export default function Home(): JSX.Element {
             {!start && (
               <button
                 type="button"
-                className="game-mode w-60 mx-auto"
+                className="game-mode mx-auto w-60"
                 onClick={startGame}
               >
                 Start Game
