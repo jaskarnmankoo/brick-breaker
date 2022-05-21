@@ -5,7 +5,8 @@ export default function useDarkMode(_darkMode: boolean): boolean {
   const [isDarkMode, setIsDarkMode] = React.useState<boolean>(false);
 
   const checkDarkMode = React.useCallback(
-    (event) => (event.matches ? setIsDarkMode(true) : setIsDarkMode(false)),
+    (event: MediaQueryListEvent) =>
+      event.matches ? setIsDarkMode(true) : setIsDarkMode(false),
     []
   );
 
